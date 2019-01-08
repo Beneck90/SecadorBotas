@@ -123,13 +123,14 @@ namespace SecadorBotas
 
         }
 
+
         //Este timer se creó para cuando se programe un encendido automático, después de 1 minuto abrirá el form de secadores
         private void timerInicio_Tick(object sender, EventArgs e)
         {
 
-                //Verifica que ninguno de los formularios con comunicación Telnet se encuentre abierto
+                //Revisa si exite algún formulario abierto, solo si todos están cerrados abre el form secadores
             
-                if (Application.OpenForms["FrmSecadores"] == null & Application.OpenForms["FrmTarjeta1"] == null & Application.OpenForms["FrmTarjeta2"] == null & Application.OpenForms["FrmTarjeta3"] == null & Application.OpenForms["FrmTarjeta4"] == null & Application.OpenForms["FrmTarjeta5"] == null & Application.OpenForms["FrmTarjeta6"] == null & Application.OpenForms["FrmTarjeta7"] == null & Application.OpenForms["FrmTESTRelays"] == null)
+                if (Application.OpenForms["FrmSecadores"] == null & Application.OpenForms["FrmTarjeta1"] == null & Application.OpenForms["FrmTarjeta2"] == null & Application.OpenForms["FrmTarjeta3"] == null & Application.OpenForms["FrmTarjeta4"] == null & Application.OpenForms["FrmTarjeta5"] == null & Application.OpenForms["FrmTarjeta6"] == null & Application.OpenForms["FrmTarjeta7"] == null & Application.OpenForms["FrmTESTRelays"] == null & Application.OpenForms["FrmConfigIPSecadores"] == null & Application.OpenForms["FrmConfigParametros"] == null & Application.OpenForms["FrmConfigPeriodoActividad"] == null & Application.OpenForms["FrmConfServTar1"] == null & Application.OpenForms["FrmConfServTar2"] == null & Application.OpenForms["FrmConfServTar3"] == null & Application.OpenForms["FrmConfServTar4"] == null & Application.OpenForms["FrmConfServTar5"] == null & Application.OpenForms["FrmConfServTar6"] == null & Application.OpenForms["FrmConfServTar7"] == null & Application.OpenForms["FrmGuiaEncendidoAuto"] == null & Application.OpenForms["FrmLoginAyudaInstalacion"] == null & Application.OpenForms["FrmLoginEstado1"] == null & Application.OpenForms["FrmLoginEstado2"] == null & Application.OpenForms["FrmLoginEstado3"] == null & Application.OpenForms["FrmLoginEstado4"] == null & Application.OpenForms["FrmLoginEstado5"] == null & Application.OpenForms["FrmLoginEstado6"] == null & Application.OpenForms["FrmLoginEstado7"] == null & Application.OpenForms["FrmLoginEstadoBotones"] == null & Application.OpenForms["FrmLoginIPs"] == null & Application.OpenForms["FrmLoginParametros"] == null & Application.OpenForms["FrmLoginPeriodoActiv"] == null & Application.OpenForms["FrmLoginTESTRelays"] == null & Application.OpenForms["FrmMenuServicioTarj1"] == null & Application.OpenForms["FrmMenuServicioTarj2"] == null & Application.OpenForms["FrmMenuServicioTarj3"] == null & Application.OpenForms["FrmMenuServicioTarj4"] == null & Application.OpenForms["FrmMenuServicioTarj5"] == null & Application.OpenForms["FrmMenuServicioTarj6"] == null & Application.OpenForms["FrmMenuServicioTarj7"] == null & Application.OpenForms["FrmPassAccesoGeneral"] == null)
                 {
 
                 Frames.FrmSecadores formt1 = new Frames.FrmSecadores();
