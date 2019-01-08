@@ -158,6 +158,7 @@
             // lblHrsSerCalefactor4
             // 
             this.lblHrsSerCalefactor4.BackColor = System.Drawing.Color.Black;
+            this.lblHrsSerCalefactor4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblHrsSerCalefactor4.Font = new System.Drawing.Font("Handel Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHrsSerCalefactor4.ForeColor = System.Drawing.Color.Snow;
             this.lblHrsSerCalefactor4.Location = new System.Drawing.Point(365, 167);
@@ -171,6 +172,7 @@
             // lblHrsSerUV4
             // 
             this.lblHrsSerUV4.BackColor = System.Drawing.Color.Black;
+            this.lblHrsSerUV4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblHrsSerUV4.Font = new System.Drawing.Font("Handel Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHrsSerUV4.ForeColor = System.Drawing.Color.Snow;
             this.lblHrsSerUV4.Location = new System.Drawing.Point(365, 115);
@@ -184,6 +186,7 @@
             // lblHrsSerMotor4
             // 
             this.lblHrsSerMotor4.BackColor = System.Drawing.Color.Black;
+            this.lblHrsSerMotor4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblHrsSerMotor4.Font = new System.Drawing.Font("Handel Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHrsSerMotor4.ForeColor = System.Drawing.Color.Snow;
             this.lblHrsSerMotor4.Location = new System.Drawing.Point(365, 66);

@@ -3836,5 +3836,109 @@ namespace SecadorBotas.Properties
 
         #endregion BanderasONOFF
 
+        //ENCENDIDO Y APAGADO AUTOMATICO
+
+        #region PeriodoON
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int HoraPeriodoON
+        {
+            get
+            {
+                return ((int)(this["HoraPeriodoON"]));
+            }
+            set
+            {
+                this["HoraPeriodoON"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MinPeriodoON
+        {
+            get
+            {
+                return ((int)(this["MinPeriodoON"]));
+            }
+            set
+            {
+                this["MinPeriodoON"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("---")]
+        public string DiaON
+        {
+            get
+            {
+                return ((string)(this["DiaON"]));
+            }
+            set
+            {
+                this["DiaON"] = value;
+            }
+        }
+
+        #endregion PeriodoON
+
+        #region PeriodoOFF
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int HoraPeriodoOFF
+        {
+            get
+            {
+                return ((int)(this["HoraPeriodoOFF"]));
+            }
+            set
+            {
+                this["HoraPeriodoOFF"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MinPeriodoOFF
+        {
+            get
+            {
+                return ((int)(this["MinPeriodoOFF"]));
+            }
+            set
+            {
+                this["MinPeriodoOFF"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("---")]
+        public string DiaOFF
+        {
+            get
+            {
+                return ((string)(this["DiaOFF"]));
+            }
+            set
+            {
+                this["DiaOFF"] = value;
+            }
+        }
+
+        #endregion PeriodoOFF
+
+
+
+
+
     }
 }

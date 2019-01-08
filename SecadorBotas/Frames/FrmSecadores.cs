@@ -32,7 +32,17 @@ namespace SecadorBotas.Frames
 
         private void FrmSecadores_Load(object sender, EventArgs e)
         {
-           
+
+            #region ApagadoAutomatico
+
+            //Enciende timer de apagado automático
+            timerApagado.Start();
+
+
+            #endregion ApagadoAutomatico
+
+
+            //SECADORES
 
             #region Secador1
 
@@ -6354,6 +6364,233 @@ namespace SecadorBotas.Frames
             catch (Exception)
             {
                 MessageBox.Show("Revise conexión de red o IP 7!! ");
+            }
+        }
+
+        private void pictureBoxDisabled7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+  
+                //R.Close();
+                //R.EnvioInstruccionRelay("reset");
+                Frames.FrmLoginPeriodoActiv formLoginPeriodo = new Frames.FrmLoginPeriodoActiv();
+                formLoginPeriodo.Show();
+                //this.Close();
+
+            }
+
+            catch (Exception ex)
+            {
+
+                Frames.FrmLoginPeriodoActiv formLoginPeriodo = new Frames.FrmLoginPeriodoActiv();
+                formLoginPeriodo.Show();
+                this.Close();
+
+            }
+        }
+
+        private void timerApagado_Tick(object sender, EventArgs e)
+        {
+            //Valores guardados en configuración automática de apagado
+            int Hra = Properties.Settings.Default.HoraPeriodoOFF;
+            int Min = Properties.Settings.Default.MinPeriodoOFF;
+            string DiaOFF = Properties.Settings.Default.DiaOFF;
+
+            //Nombre de día actual
+            string Dia = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+
+            //Hora y minuto actual
+            int Hrs = DateTime.Now.Hour;
+            int Mins = DateTime.Now.Minute;
+
+            switch (Dia)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+
+                    break;
+                case "Tuesday":
+                    DiaEs = "Martes";
+
+                    break;
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+
+                    break;
+                case "Thursday":
+                    DiaEs = "Jueves";
+
+                    break;
+                case "Friday":
+                    DiaEs = "Viernes";
+
+                    break;
+                case "Saturday":
+                    DiaEs = "Sabado";
+
+                    break;
+                case "Sunday":
+                    DiaEs = "Domingo";
+
+                    break;
+
+            }
+
+            if (DiaOFF == DiaEs)
+            {
+
+                if (Hra == Hrs)
+                {
+
+                    if (Min == Mins)
+                    {
+                        #region ApagadoTarjeta1
+
+                        //Si secador esta activado apaga tarjeta
+                        if (Properties.Settings.Default.Estado1 == 1)
+                        {
+
+
+                            string IP1 = Properties.Settings.Default.IP1.ToString();//IP secador 1
+                            R.ObtenerIP(IP1);//Obtiene IP de tarjeta Relay 
+
+                            R.EnvioInstruccionRelay("reset");
+
+                            Properties.Settings.Default.Bandera1ONOFF = "off";
+                            Properties.Settings.Default.EstadoCalef1 = "off";
+
+                            R.Close();
+                        }
+
+
+                        #endregion ApagadoTarjeta1
+
+                        #region ApagadoTarjeta2
+
+                        if (Properties.Settings.Default.Estado2 == 1)
+                        {
+                            string IP2 = Properties.Settings.Default.IP2.ToString();//IP secador 2
+                            R.ObtenerIP(IP2);//Obtiene IP de tarjeta Relay
+
+                            R.EnvioInstruccionRelay("reset");
+
+                            Properties.Settings.Default.Bandera2ONOFF = "off";
+                            Properties.Settings.Default.EstadoCalef2 = "off";
+
+                            R.Close();
+                        }
+
+                        #endregion ApagadoTarjeta2
+
+                        #region ApagadoTarjeta3
+
+                        if (Properties.Settings.Default.Estado3 == 1)
+                        {
+                            string IP3 = Properties.Settings.Default.IP3.ToString();//IP secador 3
+                            R.ObtenerIP(IP3);//Obtiene IP de tarjeta Relay
+
+                            R.EnvioInstruccionRelay("reset");
+
+                            Properties.Settings.Default.Bandera3ONOFF = "off";
+                            Properties.Settings.Default.EstadoCalef3 = "off";
+
+                            R.Close();
+                        }
+
+                        #endregion ApagadoTarjeta3
+
+                        #region ApagadoTarjeta4
+
+                        if (Properties.Settings.Default.Estado4 == 1)
+                        {
+                            string IP4 = Properties.Settings.Default.IP4.ToString();//IP secador 4
+                            R.ObtenerIP(IP4);//Obtiene IP de tarjeta Relay
+
+                            R.EnvioInstruccionRelay("reset");
+
+                            Properties.Settings.Default.Bandera4ONOFF = "off";
+                            Properties.Settings.Default.EstadoCalef4 = "off";
+
+                            R.Close();
+                        }
+
+                        #endregion ApagadoTarjeta4
+
+                        #region ApagadoTarjeta5
+
+                        if (Properties.Settings.Default.Estado5 == 1)
+                        {
+                            string IP5 = Properties.Settings.Default.IP5.ToString();//IP secador 5
+                            R.ObtenerIP(IP5);//Obtiene IP de tarjeta Relay
+
+                            R.EnvioInstruccionRelay("reset");
+
+                            Properties.Settings.Default.Bandera5ONOFF = "off";
+                            Properties.Settings.Default.EstadoCalef5 = "off";
+
+                            R.Close();
+                        }
+
+                        #endregion ApagadoTarjeta5
+
+                        #region ApagadoTarjeta6
+
+                        if (Properties.Settings.Default.Estado6 == 1)
+                        {
+                            string IP6 = Properties.Settings.Default.IP6.ToString();//IP secador 6
+                            R.ObtenerIP(IP6);//Obtiene IP de tarjeta Relay
+
+                            R.EnvioInstruccionRelay("reset");
+
+                            Properties.Settings.Default.Bandera6ONOFF = "off";
+                            Properties.Settings.Default.EstadoCalef6 = "off";
+
+                            R.Close();
+                        }
+
+                        #endregion ApagadoTarjeta6
+
+                        #region ApagadoTarjeta7
+
+                        if (Properties.Settings.Default.Estado7 == 1)
+                        {
+                            string IP7 = Properties.Settings.Default.IP7.ToString();//IP secador 7
+                            R.ObtenerIP(IP7);//Obtiene IP de tarjeta Relay
+
+                            R.EnvioInstruccionRelay("reset");
+
+                            Properties.Settings.Default.Bandera7ONOFF = "off";
+                            Properties.Settings.Default.EstadoCalef7 = "off";
+
+                            R.Close();
+                        }
+
+                        #endregion ApagadoTarjeta7
+
+                        #region BotonesEnOFF
+
+                        Properties.Settings.Default.Bandera1ONOFF = "off";
+                        Properties.Settings.Default.Bandera2ONOFF = "off";
+                        Properties.Settings.Default.Bandera3ONOFF = "off";
+                        Properties.Settings.Default.Bandera4ONOFF = "off";
+                        Properties.Settings.Default.Bandera5ONOFF = "off";
+                        Properties.Settings.Default.Bandera6ONOFF = "off";
+                        Properties.Settings.Default.Bandera7ONOFF = "off";
+                        Properties.Settings.Default.Save();
+
+                        #endregion BotonesEnOFF
+
+                        Application.Exit();
+
+                    }
+                }
             }
         }
     }

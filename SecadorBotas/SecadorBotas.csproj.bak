@@ -12,7 +12,6 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,6 +27,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -61,17 +61,16 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
-    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,10 +79,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TaskScheduler, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Librerias Programador de tareas C#\TaskScheduler Library &amp; Doc\TaskScheduler.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\MinimilistTelnet.cs" />
@@ -105,12 +100,6 @@
     </Compile>
     <Compile Include="Frames\FrmConfigParametros.Designer.cs">
       <DependentUpon>FrmConfigParametros.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frames\FrmConfPeriodoActividad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frames\FrmConfPeriodoActividad.Designer.cs">
-      <DependentUpon>FrmConfPeriodoActividad.cs</DependentUpon>
     </Compile>
     <Compile Include="Frames\FrmConfServTar1.cs">
       <SubType>Form</SubType>
@@ -153,12 +142,6 @@
     </Compile>
     <Compile Include="Frames\FrmConfServTar7.Designer.cs">
       <DependentUpon>FrmConfServTar7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frames\FrmGuiaEncendidoAuto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frames\FrmGuiaEncendidoAuto.Designer.cs">
-      <DependentUpon>FrmGuiaEncendidoAuto.cs</DependentUpon>
     </Compile>
     <Compile Include="Frames\FrmLoginAyudaInstalacion.cs">
       <SubType>Form</SubType>
@@ -225,12 +208,6 @@
     </Compile>
     <Compile Include="Frames\FrmLoginParametros.Designer.cs">
       <DependentUpon>FrmLoginParametros.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frames\FrmLoginPeriodoActiv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frames\FrmLoginPeriodoActiv.Designer.cs">
-      <DependentUpon>FrmLoginPeriodoActiv.cs</DependentUpon>
     </Compile>
     <Compile Include="Frames\FrmMenuServicioTarj1.cs">
       <SubType>Form</SubType>
@@ -354,9 +331,6 @@
     <EmbeddedResource Include="Frames\FrmConfigParametros.resx">
       <DependentUpon>FrmConfigParametros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frames\FrmConfPeriodoActividad.resx">
-      <DependentUpon>FrmConfPeriodoActividad.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frames\FrmConfServTar1.resx">
       <DependentUpon>FrmConfServTar1.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,9 +351,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frames\FrmConfServTar7.resx">
       <DependentUpon>FrmConfServTar7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frames\FrmGuiaEncendidoAuto.resx">
-      <DependentUpon>FrmGuiaEncendidoAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frames\FrmLoginAyudaInstalacion.resx">
       <DependentUpon>FrmLoginAyudaInstalacion.cs</DependentUpon>
@@ -413,9 +384,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frames\FrmLoginParametros.resx">
       <DependentUpon>FrmLoginParametros.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frames\FrmLoginPeriodoActiv.resx">
-      <DependentUpon>FrmLoginPeriodoActiv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frames\FrmMenuServicioTarj1.resx">
       <DependentUpon>FrmMenuServicioTarj1.cs</DependentUpon>
@@ -497,30 +465,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\SecadorBotas.vshost.exe" />
-    <None Include="Imgs\1.png" />
-    <Content Include="Imgs\2.png" />
-    <Content Include="Imgs\3.png" />
-    <Content Include="Imgs\4.png" />
-    <None Include="Imgs\5.png" />
-    <Content Include="Imgs\6.png" />
-    <Content Include="Imgs\7.png" />
-    <Content Include="Imgs\8.png" />
-    <Content Include="Imgs\9.png" />
     <Content Include="Imgs\acondicionador-de-aire.png" />
     <None Include="Imgs\acondicionador-de-aire2.png" />
     <Content Include="Imgs\BtnOFF.png" />
     <Content Include="Imgs\BtnON.png" />
     <Content Include="Imgs\BtnVolver.png" />
     <Content Include="Imgs\Config.png" />
-    <Content Include="Imgs\decrement.png" />
     <Content Include="Imgs\Disabled.png" />
     <Content Include="Imgs\filtro-uv%282%29.png" />
     <Content Include="Imgs\filtroUVON.png" />
     <Content Include="Imgs\guardar.png" />
-    <Content Include="Imgs\increment.png" />
     <Content Include="Imgs\login.png" />
     <Content Include="Imgs\Logo.jpg" />
-    <Content Include="Imgs\manual.png" />
     <Content Include="Imgs\OFF.png" />
     <Content Include="Imgs\ON.png" />
     <None Include="Imgs\parametros.png" />
@@ -530,13 +486,12 @@
     <Content Include="Imgs\teclado.png" />
     <Content Include="Imgs\termometro.png" />
     <Content Include="Imgs\Test.png" />
-    <Content Include="Imgs\timeline.png" />
     <Content Include="Imgs\ventilador.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

@@ -55,7 +55,7 @@ namespace SecadorBotas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            timerInicio.Start();
            
            
         }
@@ -122,5 +122,23 @@ namespace SecadorBotas
         {
 
         }
+
+        //Este timer se creó para cuando se programe un encendido automático, después de 1 minuto abrirá el form de secadores
+        private void timerInicio_Tick(object sender, EventArgs e)
+        {
+
+                //Verifica que ninguno de los formularios con comunicación Telnet se encuentre abierto
+            
+                if (Application.OpenForms["FrmSecadores"] == null & Application.OpenForms["FrmTarjeta1"] == null & Application.OpenForms["FrmTarjeta2"] == null & Application.OpenForms["FrmTarjeta3"] == null & Application.OpenForms["FrmTarjeta4"] == null & Application.OpenForms["FrmTarjeta5"] == null & Application.OpenForms["FrmTarjeta6"] == null & Application.OpenForms["FrmTarjeta7"] == null & Application.OpenForms["FrmTESTRelays"] == null)
+                {
+
+                Frames.FrmSecadores formt1 = new Frames.FrmSecadores();
+                formt1.Show();
+
+                }
+
+
+            }        
+        }
     }
-}
+

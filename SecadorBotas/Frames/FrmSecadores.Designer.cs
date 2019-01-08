@@ -139,9 +139,12 @@
             this.timerONCalefactor7 = new System.Windows.Forms.Timer(this.components);
             this.timerOFFCalefactor7 = new System.Windows.Forms.Timer(this.components);
             this.timerTemp7 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblMsjRed = new System.Windows.Forms.Label();
+            this.timerApagado = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisabled7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisabled6)).BeginInit();
@@ -164,6 +167,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT2OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT1OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT1ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -330,6 +334,7 @@
             this.pictureBoxDisabled7.TabIndex = 262;
             this.pictureBoxDisabled7.TabStop = false;
             this.pictureBoxDisabled7.Visible = false;
+            this.pictureBoxDisabled7.Click += new System.EventHandler(this.pictureBoxDisabled7_Click);
             // 
             // pictureBoxDisabled6
             // 
@@ -965,10 +970,21 @@
             // 
             this.timerTemp7.Tick += new System.EventHandler(this.timerTemp7_Tick);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::SecadorBotas.Properties.Resources.timeline;
+            this.pictureBox4.Location = new System.Drawing.Point(494, 604);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(85, 79);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 235;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::SecadorBotas.Properties.Resources.BtnVolver;
-            this.pictureBox3.Location = new System.Drawing.Point(408, 604);
+            this.pictureBox3.Location = new System.Drawing.Point(374, 604);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(85, 79);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -979,7 +995,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SecadorBotas.Properties.Resources.BtnOFF;
-            this.pictureBox2.Location = new System.Drawing.Point(564, 604);
+            this.pictureBox2.Location = new System.Drawing.Point(619, 604);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(85, 79);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -998,12 +1014,28 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lblMsjRed
+            // 
+            this.lblMsjRed.AutoSize = true;
+            this.lblMsjRed.Font = new System.Drawing.Font("Handel Gothic", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsjRed.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblMsjRed.Location = new System.Drawing.Point(462, 561);
+            this.lblMsjRed.Name = "lblMsjRed";
+            this.lblMsjRed.Size = new System.Drawing.Size(0, 14);
+            this.lblMsjRed.TabIndex = 236;
+            // 
+            // timerApagado
+            // 
+            this.timerApagado.Tick += new System.EventHandler(this.timerApagado_Tick);
+            // 
             // FrmSecadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.Controls.Add(this.lblMsjRed);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
@@ -1036,10 +1068,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT2OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT1OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT1ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1158,5 +1192,8 @@
         private System.Windows.Forms.PictureBox pictureBoxDisabled4;
         private System.Windows.Forms.PictureBox pictureBoxDisabled2;
         private System.Windows.Forms.PictureBox pictureBoxDisabled1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblMsjRed;
+        private System.Windows.Forms.Timer timerApagado;
     }
 }

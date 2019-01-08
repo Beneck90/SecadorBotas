@@ -12,41 +12,23 @@ using System.Windows.Forms;
 
 namespace SecadorBotas.Frames
 {
-    public partial class FrmLoginEstado2 : Form
+    public partial class FrmLoginPeriodoActiv : Form
     {
-        public FrmLoginEstado2()
+        public FrmLoginPeriodoActiv()
         {
             InitializeComponent();
         }
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtPass_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-       
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             string progFiles = @"C:\Program Files\Common Files\Microsoft Shared\ink";
             string keyboardPath = Path.Combine(progFiles, "TabTip.exe");
-            Process.Start(keyboardPath); 
+            Process.Start(keyboardPath);
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            Frames.FrmTarjeta2 formtServTar2 = new Frames.FrmTarjeta2();
-            formtServTar2.Show();
+        {            
+            
             this.Close();
         }
 
@@ -62,8 +44,8 @@ namespace SecadorBotas.Frames
 
                 if (txtPass.Text == Contrasena || txtPass.Text == ContrasenaGeneral)
                 {
-                    Frames.FrmMenuServicioTarj2 formtServTar2 = new Frames.FrmMenuServicioTarj2();
-                    formtServTar2.Show();
+                    Frames.FrmConfPeriodoActividad formtPeriodo = new Frames.FrmConfPeriodoActividad();
+                    formtPeriodo.Show();
                     this.Close();
                 }
 
