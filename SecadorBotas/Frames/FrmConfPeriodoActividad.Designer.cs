@@ -104,7 +104,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(80, 64);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(754, 316);
+            this.groupBox2.Size = new System.Drawing.Size(754, 301);
             this.groupBox2.TabIndex = 273;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -147,7 +147,7 @@
             this.btnGuardarApagado.BackColor = System.Drawing.Color.YellowGreen;
             this.btnGuardarApagado.Font = new System.Drawing.Font("Handel Gothic", 7F, System.Drawing.FontStyle.Bold);
             this.btnGuardarApagado.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarApagado.Location = new System.Drawing.Point(40, 230);
+            this.btnGuardarApagado.Location = new System.Drawing.Point(40, 226);
             this.btnGuardarApagado.Name = "btnGuardarApagado";
             this.btnGuardarApagado.Size = new System.Drawing.Size(157, 35);
             this.btnGuardarApagado.TabIndex = 276;
@@ -160,7 +160,7 @@
             this.btnEliminarApagado.BackColor = System.Drawing.Color.Red;
             this.btnEliminarApagado.Font = new System.Drawing.Font("Handel Gothic", 7F, System.Drawing.FontStyle.Bold);
             this.btnEliminarApagado.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarApagado.Location = new System.Drawing.Point(235, 230);
+            this.btnEliminarApagado.Location = new System.Drawing.Point(235, 226);
             this.btnEliminarApagado.Name = "btnEliminarApagado";
             this.btnEliminarApagado.Size = new System.Drawing.Size(157, 35);
             this.btnEliminarApagado.TabIndex = 274;
@@ -171,7 +171,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = global::SecadorBotas.Properties.Resources.decrement;
-            this.pictureBox15.Location = new System.Drawing.Point(600, 230);
+            this.pictureBox15.Location = new System.Drawing.Point(600, 216);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(53, 45);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -182,7 +182,7 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = global::SecadorBotas.Properties.Resources.increment;
-            this.pictureBox16.Location = new System.Drawing.Point(600, 146);
+            this.pictureBox16.Location = new System.Drawing.Point(600, 132);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(53, 45);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -193,7 +193,7 @@
             // pictureBox17
             // 
             this.pictureBox17.Image = global::SecadorBotas.Properties.Resources.decrement;
-            this.pictureBox17.Location = new System.Drawing.Point(482, 230);
+            this.pictureBox17.Location = new System.Drawing.Point(482, 216);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(53, 45);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -204,7 +204,7 @@
             // pictureBox18
             // 
             this.pictureBox18.Image = global::SecadorBotas.Properties.Resources.increment;
-            this.pictureBox18.Location = new System.Drawing.Point(482, 146);
+            this.pictureBox18.Location = new System.Drawing.Point(482, 132);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(53, 45);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +214,7 @@
             // 
             // numericUpDownMins
             // 
-            this.numericUpDownMins.Location = new System.Drawing.Point(600, 197);
+            this.numericUpDownMins.Location = new System.Drawing.Point(600, 183);
             this.numericUpDownMins.Name = "numericUpDownMins";
             this.numericUpDownMins.Size = new System.Drawing.Size(53, 27);
             this.numericUpDownMins.TabIndex = 257;
@@ -223,7 +223,7 @@
             // 
             // numericUpDownHrs
             // 
-            this.numericUpDownHrs.Location = new System.Drawing.Point(482, 197);
+            this.numericUpDownHrs.Location = new System.Drawing.Point(482, 183);
             this.numericUpDownHrs.Name = "numericUpDownHrs";
             this.numericUpDownHrs.Size = new System.Drawing.Size(53, 27);
             this.numericUpDownHrs.TabIndex = 256;
@@ -233,7 +233,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(409, 199);
+            this.label15.Location = new System.Drawing.Point(409, 185);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(62, 19);
             this.label15.TabIndex = 255;
@@ -262,7 +262,7 @@
             "Viernes",
             "Sabado",
             "Domingo"});
-            this.comboBox3.Location = new System.Drawing.Point(235, 198);
+            this.comboBox3.Location = new System.Drawing.Point(235, 184);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(157, 22);
             this.comboBox3.TabIndex = 248;
@@ -271,7 +271,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(659, 205);
+            this.label17.Location = new System.Drawing.Point(659, 191);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(58, 19);
             this.label17.TabIndex = 247;
@@ -280,7 +280,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(541, 205);
+            this.label18.Location = new System.Drawing.Point(541, 191);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(46, 19);
             this.label18.TabIndex = 246;
@@ -289,7 +289,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(36, 198);
+            this.label19.Location = new System.Drawing.Point(36, 184);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(177, 19);
             this.label19.TabIndex = 243;
