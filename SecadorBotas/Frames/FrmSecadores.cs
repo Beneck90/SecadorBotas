@@ -33,52 +33,15 @@ namespace SecadorBotas.Frames
         private void FrmSecadores_Load(object sender, EventArgs e)
         {
 
-            #region ApagadoAutomatico
-
-            //Enciende timer de apagado automático
-            timerApagado.Start();
-
-
-            #endregion ApagadoAutomatico
-
 
             //SECADORES
 
             #region Secador1
 
-            //Si estado de secador es igual a 1 activa timers
-            if (Properties.Settings.Default.Estado1 == 1) { 
-            
-            //timer respuesta de botón
-            timerBoton1.Start();
-            //timer estado secador
-            timer1.Start();
-            //timer suma hrs de funcionamiento ventilador
-            timerHrsVent1.Start();
-            //timer suma hrs de funcionamiento calefactor
-            timerHrsCalef1.Start();
-            //timer suma hrs de funcionamiento UV
-            timerHrsUV1.Start();
-            //timer temperatura
-            timerTemp1.Start();
-            }
-            //Si no desactiva timers
-            if (Properties.Settings.Default.Estado1 == 0)
-            {
-                timerBoton1.Stop();
-                timer1.Stop();
-                timerHrsVent1.Stop();
-                timerHrsCalef1.Stop();
-                timerHrsUV1.Stop();
-                timerTemp1.Stop();
-
-                //Deshabilita picturebox de ON y OFF
-                pictureBoxT1OFF.Visible = false;
-                pictureBoxT1ON.Visible = false; 
-
-                //Activa picturebox DESACTIVADO
-                pictureBoxDisabled1.Visible = true;
-            }
+            //ACTIVO TIMERS QUE VERIFICAN ENCENDIDO Y APAGADO AUTOMATICO
+            timerON1.Start();
+            timerOFF1.Start();
+            timerVerificaEstado1.Start();
 
             #endregion Secador1
 
@@ -294,30 +257,10 @@ namespace SecadorBotas.Frames
 
             #region Secador2
 
-            if (Properties.Settings.Default.Estado2 == 1)
-            {
-                timerBoton2.Start();
-                timer2.Start();
-                timerHrsVent2.Start();
-                timerHrsCalef2.Start();
-                timerHrsUV2.Start();
-                timerTemp2.Start();
-            }
-
-            if (Properties.Settings.Default.Estado2 == 0)
-            {
-                timerBoton2.Stop();
-                timer2.Stop();
-                timerHrsVent2.Stop();
-                timerHrsCalef2.Stop();
-                timerHrsUV2.Stop();
-                timerTemp2.Stop();
-
-                pictureBoxT2OFF.Visible = false;
-                pictureBoxT2ON.Visible = false;
-                pictureBoxDisabled2.Visible = true;
-            }
-
+            //ACTIVO TIMERS QUE VERIFICAN ENCENDIDO Y APAGADO AUTOMATICO
+            timerON2.Start();
+            timerOFF2.Start();
+            timerVerificaEstado2.Start();
 
             #endregion Secador2
 
@@ -536,29 +479,10 @@ namespace SecadorBotas.Frames
 
             #region Secador3
 
-            if (Properties.Settings.Default.Estado3 == 1) { 
-
-                timerBoton3.Start();
-                timer3.Start();
-                timerHrsVent3.Start();
-                timerHrsCalef3.Start();
-                timerHrsUV3.Start();
-                timerTemp3.Start();
-            }
-            if (Properties.Settings.Default.Estado3 == 0)
-            {
-                timerBoton3.Stop();
-                timer3.Stop();
-                timerHrsVent3.Stop();
-                timerHrsCalef3.Stop();
-                timerHrsUV3.Stop();
-                timerTemp3.Stop();
-
-                pictureBoxT3OFF.Visible = false;
-                pictureBoxT3ON.Visible = false;
-                pictureBoxDisabled3.Visible = true;
-            }
-
+            //ACTIVO TIMERS QUE VERIFICAN ENCENDIDO Y APAGADO AUTOMATICO
+            timerON3.Start();
+            timerOFF3.Start();
+            timerVerificaEstado3.Start();
 
             #endregion Secador3
 
@@ -778,32 +702,10 @@ namespace SecadorBotas.Frames
 
             #region Secador4
 
-            if (Properties.Settings.Default.Estado4 == 1)
-            {
-
-                timerBoton4.Start();
-                timer4.Start();
-                timerHrsVent4.Start();
-                timerHrsCalef4.Start();
-                timerHrsUV4.Start();
-                timerTemp4.Start();
-            }
-
-            if (Properties.Settings.Default.Estado4 == 0)
-            {
-
-                timerBoton4.Stop();
-                timer4.Stop();
-                timerHrsVent4.Stop();
-                timerHrsCalef4.Stop();
-                timerHrsUV4.Stop();
-                timerTemp4.Stop();
-
-                pictureBoxT4OFF.Visible = false;
-                pictureBoxT4ON.Visible = false;
-                pictureBoxDisabled4.Visible = true;
-            }
-
+            //ACTIVO TIMERS QUE VERIFICAN ENCENDIDO Y APAGADO AUTOMATICO
+            timerON4.Start();
+            timerOFF4.Start();
+            timerVerificaEstado4.Start();
 
             #endregion Secador4
 
@@ -1021,32 +923,10 @@ namespace SecadorBotas.Frames
 
             #region Secador5
 
-            if (Properties.Settings.Default.Estado5 == 1)
-            {
-
-                timerBoton5.Start();
-                timer5.Start();
-                timerHrsVent5.Start();
-                timerHrsCalef5.Start();
-                timerHrsUV5.Start();
-                timerTemp5.Start();
-            }
-
-            if (Properties.Settings.Default.Estado5 == 0)
-            {
-
-                timerBoton5.Stop();
-                timer5.Stop();
-                timerHrsVent5.Stop();
-                timerHrsCalef5.Stop();
-                timerHrsUV5.Stop();
-                timerTemp5.Stop();
-
-                pictureBoxT5OFF.Visible = false;
-                pictureBoxT5ON.Visible = false;
-                pictureBoxDisabled5.Visible = true;
-            }
-
+            //ACTIVO TIMERS QUE VERIFICAN ENCENDIDO Y APAGADO AUTOMATICO
+            timerON5.Start();
+            timerOFF5.Start();
+            timerVerificaEstado5.Start();
 
             #endregion Secador5
 
@@ -1265,32 +1145,10 @@ namespace SecadorBotas.Frames
 
             #region Secador6
 
-            if (Properties.Settings.Default.Estado6 == 1)
-            {
-
-                timerBoton6.Start();
-                timer6.Start();
-                timerHrsVent6.Start();
-                timerHrsCalef6.Start();
-                timerHrsUV6.Start();
-                timerTemp6.Start();
-            }
-
-            if (Properties.Settings.Default.Estado6 == 0)
-            {
-
-                timerBoton6.Stop();
-                timer6.Stop();
-                timerHrsVent6.Stop();
-                timerHrsCalef6.Stop();
-                timerHrsUV6.Stop();
-                timerTemp6.Stop();
-
-                pictureBoxT6OFF.Visible = false;
-                pictureBoxT6ON.Visible = false;
-                pictureBoxDisabled6.Visible = true;
-            }
-
+            //ACTIVO TIMERS QUE VERIFICAN ENCENDIDO Y APAGADO AUTOMATICO
+            timerON6.Start();
+            timerOFF6.Start();
+            timerVerificaEstado6.Start();
 
             #endregion Secador6
 
@@ -1508,32 +1366,10 @@ namespace SecadorBotas.Frames
 
             #region Secador7
 
-            if (Properties.Settings.Default.Estado7 == 1)
-            {
-
-                timerBoton7.Start();
-                timer7.Start();
-                timerHrsVent7.Start();
-                timerHrsCalef7.Start();
-                timerHrsUV7.Start();
-                timerTemp7.Start();
-            }
-
-            if (Properties.Settings.Default.Estado7 == 0)
-            {
-
-                timerBoton7.Stop();
-                timer7.Stop();
-                timerHrsVent7.Stop();
-                timerHrsCalef7.Stop();
-                timerHrsUV7.Stop();
-                timerTemp7.Stop();
-
-                pictureBoxT7OFF.Visible = false;
-                pictureBoxT7ON.Visible = false;
-                pictureBoxDisabled7.Visible = true;
-            }
-
+            //ACTIVO TIMERS QUE VERIFICAN ENCENDIDO Y APAGADO AUTOMATICO
+            timerON7.Start();
+            timerOFF7.Start();
+            timerVerificaEstado7.Start();
 
             #endregion Secador7
 
@@ -2213,8 +2049,7 @@ namespace SecadorBotas.Frames
 
 
         private void timerHrsVent1_Tick(object sender, EventArgs e)
-        {
-           
+        {           
             string IP1 = Properties.Settings.Default.IP1.ToString();//IP secador 1
 
             R.ObtenerIP(IP1);//Obtiene IP de tarjeta Relay 
@@ -3461,7 +3296,7 @@ namespace SecadorBotas.Frames
 
                 #region Hrs
 
-                //TOMAR FECHA DE UN DATO EN EL CONFIG del ventilador
+                //TOMAR FECHA DE UN DATO EN EL CONFIG del calefactor
                 int AnoCalef = Properties.Settings.Default.AnoCalefactorTres;
                 int MesCalef = Properties.Settings.Default.MesCalefactorTres;
                 int DiaCalef = Properties.Settings.Default.DiaCalefactorTres;
@@ -6198,7 +6033,7 @@ namespace SecadorBotas.Frames
             if (Properties.Settings.Default.Estado1 == 1)
             {
 
-
+              
                 string IP1 = Properties.Settings.Default.IP1.ToString();//IP secador 1
                 R.ObtenerIP(IP1);//Obtiene IP de tarjeta Relay 
 
@@ -6208,6 +6043,7 @@ namespace SecadorBotas.Frames
                 Properties.Settings.Default.EstadoCalef1 = "off";
 
                 R.Close();
+             
             }
 
 
@@ -6379,7 +6215,7 @@ namespace SecadorBotas.Frames
   
                 //R.Close();
                 //R.EnvioInstruccionRelay("reset");
-                Frames.FrmLoginPeriodoActiv formLoginPeriodo = new Frames.FrmLoginPeriodoActiv();
+                Frames.FrmLoginPeriodoActiv7 formLoginPeriodo = new Frames.FrmLoginPeriodoActiv7();
                 formLoginPeriodo.Show();
                 //this.Close();
 
@@ -6388,7 +6224,7 @@ namespace SecadorBotas.Frames
             catch (Exception ex)
             {
 
-                Frames.FrmLoginPeriodoActiv formLoginPeriodo = new Frames.FrmLoginPeriodoActiv();
+                Frames.FrmLoginPeriodoActiv7 formLoginPeriodo = new Frames.FrmLoginPeriodoActiv7();
                 formLoginPeriodo.Show();
                 this.Close();
 
@@ -6397,200 +6233,1326 @@ namespace SecadorBotas.Frames
 
         private void timerApagado_Tick(object sender, EventArgs e)
         {
-            //Valores guardados en configuración automática de apagado
-            int Hra = Properties.Settings.Default.HoraPeriodoOFF;
-            int Min = Properties.Settings.Default.MinPeriodoOFF;
-            string DiaOFF = Properties.Settings.Default.DiaOFF;
+            
+        }
 
-            //Nombre de día actual
-            string Dia = DateTime.Now.DayOfWeek.ToString();
+        private void timerON7_Tick(object sender, EventArgs e)
+        {
+
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
             string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+            int Segundo = DateTime.Now.Second;
 
-            //Hora y minuto actual
-            int Hrs = DateTime.Now.Hour;
-            int Mins = DateTime.Now.Minute;
 
-            switch (Dia)
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
             {
                 case "Monday":
                     DiaEs = "Lunes";
-
                     break;
+
                 case "Tuesday":
                     DiaEs = "Martes";
-
                     break;
+
                 case "Wednesday":
                     DiaEs = "Miercoles";
-
                     break;
+
                 case "Thursday":
                     DiaEs = "Jueves";
-
                     break;
+
                 case "Friday":
                     DiaEs = "Viernes";
-
                     break;
+
                 case "Saturday":
                     DiaEs = "Sabado";
-
                     break;
+
                 case "Sunday":
                     DiaEs = "Domingo";
-
                     break;
 
             }
 
-            if (DiaOFF == DiaEs)
+
+            //LLAMADA AL METODO QUE VALIDA ENCENDIDO AUTOMATICO DEL SECADOR 7
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoONSecador7(DiaEs, Hora, Minuto))
             {
 
-                if (Hra == Hrs)
+                #region ENCIENDE_SECADOR
+
+                
+                string IP7 = Properties.Settings.Default.IP7.ToString();//IP secador 7
+
+                try { 
+
+                R.ObtenerIP(IP7);//Obtiene IP de tarjeta Relay
+
+
+                R.EnvioInstruccionRelay("relay on 0");
+                R.EnvioInstruccionRelay("relay on 1");
+                R.EnvioInstruccionRelay("relay on 2");
+                R.EnvioInstruccionRelay("relay on 3");
+
+                Properties.Settings.Default.Bandera7ONOFF = "on";
+                Properties.Settings.Default.EstadoCalef7 = "on";
+                Properties.Settings.Default.Estado7 = 1;
+                Properties.Settings.Default.Save();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para encender secador 7 el "+ DiaEs + " a las "+ Hora +":"+Minuto+ "\n No se puede realizar la acción ya que existe un error de red!");
+                }
+
+                #endregion ENCIENDE_SECADOR
+
+            }
+        }
+
+
+        private void timerVerificaEstado7_Tick(object sender, EventArgs e)
+        {
+            
+            if (Properties.Settings.Default.Estado7 == 1)
+            {
+
+                timerBoton7.Start();
+                timer7.Start();
+                timerHrsVent7.Start();
+                timerHrsCalef7.Start();
+                timerHrsUV7.Start();
+                timerTemp7.Start();
+                pictureBoxDisabled7.Visible = false;
+
+            }
+
+            if (Properties.Settings.Default.Estado7 == 0)
+            {
+
+                timerBoton7.Stop();
+                timer7.Stop();
+                timerHrsVent7.Stop();
+                timerHrsCalef7.Stop();
+                timerHrsUV7.Stop();
+                timerTemp7.Stop();
+
+                pictureBoxT7OFF.Visible = false;
+                pictureBoxT7ON.Visible = false;
+                pictureBoxDisabled7.Visible = true;
+            }
+        }
+
+        private void timerOFF7_Tick(object sender, EventArgs e)
+        {
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA APAGADO AUTOMATICO DEL SECADOR 7
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoOFFSecador7(DiaEs, Hora, Minuto))
+            {
+
+                #region APAGA_SECADOR
+
+                string IP7 = Properties.Settings.Default.IP7.ToString();//IP secador 7
+
+                try
+                {
+                    R.ObtenerIP(IP7);//Obtiene IP de tarjeta Relay
+
+                    R.EnvioInstruccionRelay("reset");
+
+                    Properties.Settings.Default.Bandera7ONOFF = "off";
+                    Properties.Settings.Default.EstadoCalef7 = "off";
+                    Properties.Settings.Default.Save();
+
+                    R.Close();
+
+                    Properties.Settings.Default.Estado7 = 0;
+                    Properties.Settings.Default.Save();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para apagar secador 7 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+
+                }
+
+               #endregion APAGA_SECADOR
+
+
+                }
+        }
+
+        private void timerON6_Tick(object sender, EventArgs e)
+        {
+
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+            
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA ENCENDIDO AUTOMATICO DEL SECADOR 6
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoONSecador6(DiaEs, Hora, Minuto))
+            {
+
+                #region ENCIENDE_SECADOR
+
+                string IP6 = Properties.Settings.Default.IP6.ToString();//IP secador 6
+
+                try{
+
+                R.ObtenerIP(IP6);//Obtiene IP de tarjeta Relay
+
+                R.EnvioInstruccionRelay("relay on 0");
+                R.EnvioInstruccionRelay("relay on 1");
+                R.EnvioInstruccionRelay("relay on 2");
+                R.EnvioInstruccionRelay("relay on 3");
+
+                Properties.Settings.Default.Bandera6ONOFF = "on";
+                Properties.Settings.Default.EstadoCalef6 = "on";
+                Properties.Settings.Default.Estado6 = 1;
+                Properties.Settings.Default.Save();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para encender secador 6 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+                }
+
+                #endregion ENCIENDE_SECADOR
+
+            }
+        }
+        
+
+        private void timerOFF6_Tick(object sender, EventArgs e)
+        {
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA APAGADO AUTOMATICO DEL SECADOR 6
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoOFFSecador6(DiaEs, Hora, Minuto))
+            {
+
+                #region APAGA_SECADOR
+
+                string IP6 = Properties.Settings.Default.IP6.ToString();//IP secador 6
+
+                try { 
+
+                R.ObtenerIP(IP6);//Obtiene IP de tarjeta Relay
+
+                R.EnvioInstruccionRelay("reset");
+
+                Properties.Settings.Default.Bandera6ONOFF = "off";
+                Properties.Settings.Default.EstadoCalef6 = "off";
+                Properties.Settings.Default.Save();
+
+                R.Close();
+
+                Properties.Settings.Default.Estado6 = 0;
+                Properties.Settings.Default.Save();
+
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para apagar secador 6 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+
+                }
+
+                #endregion APAGA_SECADOR
+
+
+
+            }
+        }
+
+        private void timerVerificaEstado6_Tick(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.Estado6 == 1)
+            {
+
+                timerBoton6.Start();
+                timer6.Start();
+                timerHrsVent6.Start();
+                timerHrsCalef6.Start();
+                timerHrsUV6.Start();
+                timerTemp6.Start();
+                pictureBoxDisabled6.Visible = false;
+            }
+
+            if (Properties.Settings.Default.Estado6 == 0)
+            {
+
+
+                timerBoton6.Stop();
+                timer6.Stop();
+                timerHrsVent6.Stop();
+                timerHrsCalef6.Stop();
+                timerHrsUV6.Stop();
+                timerTemp6.Stop();
+
+                pictureBoxT6OFF.Visible = false;
+                pictureBoxT6ON.Visible = false;
+                pictureBoxDisabled6.Visible = true;
+            }
+
+        }
+
+        private void timerON5_Tick(object sender, EventArgs e)
+        {
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA ENCENDIDO AUTOMATICO DEL SECADOR 5
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoONSecador5(DiaEs, Hora, Minuto))
+            {
+
+                #region ENCIENDE_SECADOR
+
+                string IP5 = Properties.Settings.Default.IP5.ToString();//IP secador 5
+
+                try
                 {
 
-                    if (Min == Mins)
-                    {
-                        #region ApagadoTarjeta1
+                    R.ObtenerIP(IP5);//Obtiene IP de tarjeta Relay
 
-                        //Si secador esta activado apaga tarjeta
-                        if (Properties.Settings.Default.Estado1 == 1)
-                        {
+                    R.EnvioInstruccionRelay("relay on 0");
+                    R.EnvioInstruccionRelay("relay on 1");
+                    R.EnvioInstruccionRelay("relay on 2");
+                    R.EnvioInstruccionRelay("relay on 3");
 
+                    Properties.Settings.Default.Bandera5ONOFF = "on";
+                    Properties.Settings.Default.EstadoCalef5 = "on";
+                    Properties.Settings.Default.Estado5 = 1;
+                    Properties.Settings.Default.Save();
 
-                            string IP1 = Properties.Settings.Default.IP1.ToString();//IP secador 1
-                            R.ObtenerIP(IP1);//Obtiene IP de tarjeta Relay 
-
-                            R.EnvioInstruccionRelay("reset");
-
-                            Properties.Settings.Default.Bandera1ONOFF = "off";
-                            Properties.Settings.Default.EstadoCalef1 = "off";
-
-                            R.Close();
-                        }
-
-
-                        #endregion ApagadoTarjeta1
-
-                        #region ApagadoTarjeta2
-
-                        if (Properties.Settings.Default.Estado2 == 1)
-                        {
-                            string IP2 = Properties.Settings.Default.IP2.ToString();//IP secador 2
-                            R.ObtenerIP(IP2);//Obtiene IP de tarjeta Relay
-
-                            R.EnvioInstruccionRelay("reset");
-
-                            Properties.Settings.Default.Bandera2ONOFF = "off";
-                            Properties.Settings.Default.EstadoCalef2 = "off";
-
-                            R.Close();
-                        }
-
-                        #endregion ApagadoTarjeta2
-
-                        #region ApagadoTarjeta3
-
-                        if (Properties.Settings.Default.Estado3 == 1)
-                        {
-                            string IP3 = Properties.Settings.Default.IP3.ToString();//IP secador 3
-                            R.ObtenerIP(IP3);//Obtiene IP de tarjeta Relay
-
-                            R.EnvioInstruccionRelay("reset");
-
-                            Properties.Settings.Default.Bandera3ONOFF = "off";
-                            Properties.Settings.Default.EstadoCalef3 = "off";
-
-                            R.Close();
-                        }
-
-                        #endregion ApagadoTarjeta3
-
-                        #region ApagadoTarjeta4
-
-                        if (Properties.Settings.Default.Estado4 == 1)
-                        {
-                            string IP4 = Properties.Settings.Default.IP4.ToString();//IP secador 4
-                            R.ObtenerIP(IP4);//Obtiene IP de tarjeta Relay
-
-                            R.EnvioInstruccionRelay("reset");
-
-                            Properties.Settings.Default.Bandera4ONOFF = "off";
-                            Properties.Settings.Default.EstadoCalef4 = "off";
-
-                            R.Close();
-                        }
-
-                        #endregion ApagadoTarjeta4
-
-                        #region ApagadoTarjeta5
-
-                        if (Properties.Settings.Default.Estado5 == 1)
-                        {
-                            string IP5 = Properties.Settings.Default.IP5.ToString();//IP secador 5
-                            R.ObtenerIP(IP5);//Obtiene IP de tarjeta Relay
-
-                            R.EnvioInstruccionRelay("reset");
-
-                            Properties.Settings.Default.Bandera5ONOFF = "off";
-                            Properties.Settings.Default.EstadoCalef5 = "off";
-
-                            R.Close();
-                        }
-
-                        #endregion ApagadoTarjeta5
-
-                        #region ApagadoTarjeta6
-
-                        if (Properties.Settings.Default.Estado6 == 1)
-                        {
-                            string IP6 = Properties.Settings.Default.IP6.ToString();//IP secador 6
-                            R.ObtenerIP(IP6);//Obtiene IP de tarjeta Relay
-
-                            R.EnvioInstruccionRelay("reset");
-
-                            Properties.Settings.Default.Bandera6ONOFF = "off";
-                            Properties.Settings.Default.EstadoCalef6 = "off";
-
-                            R.Close();
-                        }
-
-                        #endregion ApagadoTarjeta6
-
-                        #region ApagadoTarjeta7
-
-                        if (Properties.Settings.Default.Estado7 == 1)
-                        {
-                            string IP7 = Properties.Settings.Default.IP7.ToString();//IP secador 7
-                            R.ObtenerIP(IP7);//Obtiene IP de tarjeta Relay
-
-                            R.EnvioInstruccionRelay("reset");
-
-                            Properties.Settings.Default.Bandera7ONOFF = "off";
-                            Properties.Settings.Default.EstadoCalef7 = "off";
-
-                            R.Close();
-                        }
-
-                        #endregion ApagadoTarjeta7
-
-                        #region BotonesEnOFF
-
-                        Properties.Settings.Default.Bandera1ONOFF = "off";
-                        Properties.Settings.Default.Bandera2ONOFF = "off";
-                        Properties.Settings.Default.Bandera3ONOFF = "off";
-                        Properties.Settings.Default.Bandera4ONOFF = "off";
-                        Properties.Settings.Default.Bandera5ONOFF = "off";
-                        Properties.Settings.Default.Bandera6ONOFF = "off";
-                        Properties.Settings.Default.Bandera7ONOFF = "off";
-                        Properties.Settings.Default.Save();
-
-                        #endregion BotonesEnOFF
-
-                        Application.Exit();
-
-                    }
                 }
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para encender secador 5 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+                }
+
+                #endregion ENCIENDE_SECADOR
+
+            }
+        }
+
+        private void timerOFF5_Tick(object sender, EventArgs e)
+        {
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA APAGADO AUTOMATICO DEL SECADOR 5
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoOFFSecador5(DiaEs, Hora, Minuto))
+            {
+
+                #region APAGA_SECADOR
+
+                string IP5 = Properties.Settings.Default.IP5.ToString();//IP secador 5
+
+                try
+                {
+
+                    R.ObtenerIP(IP5);//Obtiene IP de tarjeta Relay
+
+                    R.EnvioInstruccionRelay("reset");
+
+                    Properties.Settings.Default.Bandera5ONOFF = "off";
+                    Properties.Settings.Default.EstadoCalef5 = "off";
+                    Properties.Settings.Default.Save();
+
+                    R.Close();
+
+                    Properties.Settings.Default.Estado5 = 0;
+                    Properties.Settings.Default.Save();
+
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para apagar secador 5 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+
+                }
+
+                #endregion APAGA_SECADOR
+
+            }
+        }
+
+        private void timerVerificaEstado5_Tick(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.Estado5 == 1)
+            {
+
+                timerBoton5.Start();
+                timer5.Start();
+                timerHrsVent5.Start();
+                timerHrsCalef5.Start();
+                timerHrsUV5.Start();
+                timerTemp5.Start();
+                pictureBoxDisabled5.Visible = false;
+            }
+
+            if (Properties.Settings.Default.Estado5 == 0)
+            {
+
+                timerBoton5.Stop();
+                timer5.Stop();
+                timerHrsVent5.Stop();
+                timerHrsCalef5.Stop();
+                timerHrsUV5.Stop();
+                timerTemp5.Stop();
+
+                pictureBoxT5OFF.Visible = false;
+                pictureBoxT5ON.Visible = false;
+                pictureBoxDisabled5.Visible = true;
+            }
+
+        }
+
+        private void timerON4_Tick(object sender, EventArgs e)
+        {
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA ENCENDIDO AUTOMATICO DEL SECADOR 4
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoONSecador4(DiaEs, Hora, Minuto))
+            {
+
+                #region ENCIENDE_SECADOR
+
+                string IP4 = Properties.Settings.Default.IP4.ToString();//IP secador 4
+
+                try
+                {
+
+                    R.ObtenerIP(IP4);//Obtiene IP de tarjeta Relay
+
+                    R.EnvioInstruccionRelay("relay on 0");
+                    R.EnvioInstruccionRelay("relay on 1");
+                    R.EnvioInstruccionRelay("relay on 2");
+                    R.EnvioInstruccionRelay("relay on 3");
+
+                    Properties.Settings.Default.Bandera4ONOFF = "on";
+                    Properties.Settings.Default.EstadoCalef4 = "on";
+                    Properties.Settings.Default.Estado4 = 1;
+                    Properties.Settings.Default.Save();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para encender secador 4 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+                }
+
+                #endregion ENCIENDE_SECADOR
+
+            }
+        }
+
+        private void timerOFF4_Tick(object sender, EventArgs e)
+        {
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA APAGADO AUTOMATICO DEL SECADOR 4
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoOFFSecador4(DiaEs, Hora, Minuto))
+            {
+
+                #region APAGA_SECADOR
+
+                string IP4 = Properties.Settings.Default.IP4.ToString();//IP secador 4
+
+                try
+                {
+
+                    R.ObtenerIP(IP4);//Obtiene IP de tarjeta Relay
+
+                    R.EnvioInstruccionRelay("reset");
+
+                    Properties.Settings.Default.Bandera4ONOFF = "off";
+                    Properties.Settings.Default.EstadoCalef4 = "off";
+                    Properties.Settings.Default.Save();
+
+                    R.Close();
+
+                    Properties.Settings.Default.Estado4 = 0;
+                    Properties.Settings.Default.Save();
+
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para apagar secador 4 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+
+                }
+
+                #endregion APAGA_SECADOR
+
+            }
+        }
+
+        private void timerVerificaEstado4_Tick(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.Estado4 == 1)
+            {
+
+                timerBoton4.Start();
+                timer4.Start();
+                timerHrsVent4.Start();
+                timerHrsCalef4.Start();
+                timerHrsUV4.Start();
+                timerTemp4.Start();
+                pictureBoxDisabled4.Visible = false;
+            }
+
+            if (Properties.Settings.Default.Estado4 == 0)
+            {
+
+                timerBoton4.Stop();
+                timer4.Stop();
+                timerHrsVent4.Stop();
+                timerHrsCalef4.Stop();
+                timerHrsUV4.Stop();
+                timerTemp4.Stop();
+
+                pictureBoxT4OFF.Visible = false;
+                pictureBoxT4ON.Visible = false;
+                pictureBoxDisabled4.Visible = true;
+            }
+        }
+
+        private void timerON3_Tick(object sender, EventArgs e)
+        {
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA ENCENDIDO AUTOMATICO DEL SECADOR 3
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoONSecador3(DiaEs, Hora, Minuto))
+            {
+
+                #region ENCIENDE_SECADOR
+
+                string IP3 = Properties.Settings.Default.IP3.ToString();//IP secador 3
+
+                try
+                {
+
+                    R.ObtenerIP(IP3);//Obtiene IP de tarjeta Relay
+
+                    R.EnvioInstruccionRelay("relay on 0");
+                    R.EnvioInstruccionRelay("relay on 1");
+                    R.EnvioInstruccionRelay("relay on 2");
+                    R.EnvioInstruccionRelay("relay on 3");
+
+                    Properties.Settings.Default.Bandera3ONOFF = "on";
+                    Properties.Settings.Default.EstadoCalef3 = "on";
+                    Properties.Settings.Default.Estado3 = 1;
+                    Properties.Settings.Default.Save();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para encender secador 3 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+                }
+
+                #endregion ENCIENDE_SECADOR
+
+            }
+        }
+
+        private void timerOFF3_Tick(object sender, EventArgs e)
+        {
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA APAGADO AUTOMATICO DEL SECADOR 3
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoOFFSecador3(DiaEs, Hora, Minuto))
+            {
+
+                #region APAGA_SECADOR
+
+                string IP3 = Properties.Settings.Default.IP3.ToString();//IP secador 3
+
+                try
+                {
+
+                    R.ObtenerIP(IP3);//Obtiene IP de tarjeta Relay
+
+                    R.EnvioInstruccionRelay("reset");
+
+                    Properties.Settings.Default.Bandera3ONOFF = "off";
+                    Properties.Settings.Default.EstadoCalef3 = "off";
+                    Properties.Settings.Default.Save();
+
+                    R.Close();
+
+                    Properties.Settings.Default.Estado3 = 0;
+                    Properties.Settings.Default.Save();
+
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para apagar secador 3 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+
+                }
+
+                #endregion APAGA_SECADOR
+
+            }
+        }
+
+        private void timerVerificaEstado3_Tick(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.Estado3 == 1)
+            {
+
+                timerBoton3.Start();
+                timer3.Start();
+                timerHrsVent3.Start();
+                timerHrsCalef3.Start();
+                timerHrsUV3.Start();
+                timerTemp3.Start();
+                pictureBoxDisabled3.Visible = false;
+
+            }
+
+            if (Properties.Settings.Default.Estado3 == 0)
+            {
+                timerBoton3.Stop();
+                timer3.Stop();
+                timerHrsVent3.Stop();
+                timerHrsCalef3.Stop();
+                timerHrsUV3.Stop();
+                timerTemp3.Stop();
+
+                pictureBoxT3OFF.Visible = false;
+                pictureBoxT3ON.Visible = false;
+                pictureBoxDisabled3.Visible = true;
+            }
+        }
+
+        private void timerON2_Tick(object sender, EventArgs e)
+        {
+
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA ENCENDIDO AUTOMATICO DEL SECADOR 2
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoONSecador2(DiaEs, Hora, Minuto))
+            {
+
+                #region ENCIENDE_SECADOR
+
+                string IP2 = Properties.Settings.Default.IP2.ToString();//IP secador 2
+
+                try
+                {
+
+                    R.ObtenerIP(IP2);//Obtiene IP de tarjeta Relay
+
+                    R.EnvioInstruccionRelay("relay on 0");
+                    R.EnvioInstruccionRelay("relay on 1");
+                    R.EnvioInstruccionRelay("relay on 2");
+                    R.EnvioInstruccionRelay("relay on 3");
+
+                    Properties.Settings.Default.Bandera2ONOFF = "on";
+                    Properties.Settings.Default.EstadoCalef2 = "on";
+                    Properties.Settings.Default.Estado2 = 1;
+                    Properties.Settings.Default.Save();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para encender secador 2 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+                }
+
+                #endregion ENCIENDE_SECADOR
+
+            }
+        }
+
+
+        private void timerOFF2_Tick(object sender, EventArgs e)
+        {
+
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA APAGADO AUTOMATICO DEL SECADOR 2
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoOFFSecador2(DiaEs, Hora, Minuto))
+            {
+
+                #region APAGA_SECADOR
+
+                string IP2 = Properties.Settings.Default.IP2.ToString();//IP secador 2
+
+                try
+                {
+
+                    R.ObtenerIP(IP2);//Obtiene IP de tarjeta Relay
+
+                    R.EnvioInstruccionRelay("reset");
+
+                    Properties.Settings.Default.Bandera2ONOFF = "off";
+                    Properties.Settings.Default.EstadoCalef2 = "off";
+                    Properties.Settings.Default.Save();
+
+                    R.Close();
+
+                    Properties.Settings.Default.Estado2 = 0;
+                    Properties.Settings.Default.Save();
+
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para apagar secador 2 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+
+                }
+
+                #endregion APAGA_SECADOR
+
+            }
+        }
+
+        private void timerVerificaEstado2_Tick(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.Estado2 == 1)
+            {
+                timerBoton2.Start();
+                timer2.Start();
+                timerHrsVent2.Start();
+                timerHrsCalef2.Start();
+                timerHrsUV2.Start();
+                timerTemp2.Start();
+                pictureBoxDisabled2.Visible = false;
+            }
+
+            if (Properties.Settings.Default.Estado2 == 0)
+            {
+                timerBoton2.Stop();
+                timer2.Stop();
+                timerHrsVent2.Stop();
+                timerHrsCalef2.Stop();
+                timerHrsUV2.Stop();
+                timerTemp2.Stop();
+
+                pictureBoxT2OFF.Visible = false;
+                pictureBoxT2ON.Visible = false;
+                pictureBoxDisabled2.Visible = true;
+            }
+        }
+
+        private void timerON1_Tick(object sender, EventArgs e)
+        {
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA ENCENDIDO AUTOMATICO DEL SECADOR 1
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoONSecador1(DiaEs, Hora, Minuto))
+            {
+
+                #region ENCIENDE_SECADOR
+
+                string IP1 = Properties.Settings.Default.IP1.ToString();//IP secador 1
+
+                try
+                {
+
+                    R.ObtenerIP(IP1);//Obtiene IP de tarjeta Relay
+
+                    R.EnvioInstruccionRelay("relay on 0");
+                    R.EnvioInstruccionRelay("relay on 1");
+                    R.EnvioInstruccionRelay("relay on 2");
+                    R.EnvioInstruccionRelay("relay on 3");
+
+                    Properties.Settings.Default.Bandera1ONOFF = "on";
+                    Properties.Settings.Default.EstadoCalef1 = "on";
+                    Properties.Settings.Default.Estado1 = 1;
+                    Properties.Settings.Default.Save();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para encender secador 1 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+                }
+
+                #endregion ENCIENDE_SECADOR
+
+            }
+        }
+
+        private void timerOFF1_Tick(object sender, EventArgs e)
+        {
+            string DiaEN = DateTime.Now.DayOfWeek.ToString();
+            string DiaEs = "";
+            int Hora = DateTime.Now.Hour;
+            int Minuto = DateTime.Now.Minute;
+
+
+            //SWTICH QUE TRADUCE LOS DIAS A ESPAÑOL
+            switch (DiaEN)
+            {
+                case "Monday":
+                    DiaEs = "Lunes";
+                    break;
+
+                case "Tuesday":
+                    DiaEs = "Martes";
+                    break;
+
+                case "Wednesday":
+                    DiaEs = "Miercoles";
+                    break;
+
+                case "Thursday":
+                    DiaEs = "Jueves";
+                    break;
+
+                case "Friday":
+                    DiaEs = "Viernes";
+                    break;
+
+                case "Saturday":
+                    DiaEs = "Sabado";
+                    break;
+
+                case "Sunday":
+                    DiaEs = "Domingo";
+                    break;
+
+            }
+
+
+            //LLAMADA AL METODO QUE VALIDA APAGADO AUTOMATICO DEL SECADOR 1
+            if (SecadorBotas.Clases.ConexBD.ValidaPeriodoOFFSecador1(DiaEs, Hora, Minuto))
+            {
+
+                #region APAGA_SECADOR
+
+                string IP1 = Properties.Settings.Default.IP1.ToString();//IP secador 1
+
+                try
+                {
+
+                    R.ObtenerIP(IP1);//Obtiene IP de tarjeta Relay
+
+                    R.EnvioInstruccionRelay("reset");
+
+                    Properties.Settings.Default.Bandera1ONOFF = "off";
+                    Properties.Settings.Default.EstadoCalef1 = "off";
+                    Properties.Settings.Default.Save();
+
+                    R.Close();
+
+                    Properties.Settings.Default.Estado1 = 0;
+                    Properties.Settings.Default.Save();
+
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Programado para apagar secador 1 el " + DiaEs + " a las " + Hora + ":" + Minuto + "\n No se puede realizar la acción ya que existe un error de red!");
+
+                }
+
+                #endregion APAGA_SECADOR
+
+            }
+        }
+
+        private void timerVerificaEstado1_Tick(object sender, EventArgs e)
+        {
+            //Si estado de secador es igual a 1 activa timers
+            if (Properties.Settings.Default.Estado1 == 1)
+            {
+
+                //timer respuesta de botón
+                timerBoton1.Start();
+                //timer estado secador
+                timer1.Start();
+                //timer suma hrs de funcionamiento ventilador
+                timerHrsVent1.Start();
+                //timer suma hrs de funcionamiento calefactor
+                timerHrsCalef1.Start();
+                //timer suma hrs de funcionamiento UV
+                timerHrsUV1.Start();
+                //timer temperatura
+                timerTemp1.Start();
+                //Desactiva picturebox DESACTIVADO
+                pictureBoxDisabled1.Visible = false;
+
+
+            }
+            //Si no desactiva timers
+            if (Properties.Settings.Default.Estado1 == 0)
+            {
+                timerBoton1.Stop();
+                timer1.Stop();
+                timerHrsVent1.Stop();
+                timerHrsCalef1.Stop();
+                timerHrsUV1.Stop();
+                timerTemp1.Stop();
+
+                //Deshabilita picturebox de ON y OFF
+                pictureBoxT1OFF.Visible = false;
+                pictureBoxT1ON.Visible = false;
+
+                //Activa picturebox DESACTIVADO
+                pictureBoxDisabled1.Visible = true;
             }
         }
     }

@@ -56,6 +56,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timerON = new System.Windows.Forms.Timer(this.components);
+            this.timerOFF = new System.Windows.Forms.Timer(this.components);
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -322,6 +324,14 @@
             this.pictureBox1.TabIndex = 74;
             this.pictureBox1.TabStop = false;
             // 
+            // timerON
+            // 
+            this.timerON.Tick += new System.EventHandler(this.timerON_Tick);
+            // 
+            // timerOFF
+            // 
+            this.timerOFF.Tick += new System.EventHandler(this.timerOFF_Tick);
+            // 
             // FrmTarjeta2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,5 +404,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label lblMensaje2;
+        private System.Windows.Forms.Timer timerON;
+        private System.Windows.Forms.Timer timerOFF;
     }
 }

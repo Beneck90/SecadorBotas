@@ -92,5 +92,12 @@ namespace SecadorBotas.Frames
             formtMenu1.Show();
             this.Close();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Frames.FrmLoginPeriodoActiv7 formtP = new Frames.FrmLoginPeriodoActiv7();
+            formtP.Show();
+            this.Close();
+        }
     }
 }

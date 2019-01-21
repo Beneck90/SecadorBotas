@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace SecadorBotas.Frames
 {
-    public partial class FrmLoginPeriodoActiv : Form
+    public partial class FrmLoginPeriodoActiv4 : Form
     {
-        public FrmLoginPeriodoActiv()
+        public FrmLoginPeriodoActiv4()
         {
             InitializeComponent();
         }
@@ -27,9 +27,33 @@ namespace SecadorBotas.Frames
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
-        {            
-            
-            this.Close();
+        {
+            int hora = Convert.ToInt32(DateTime.Now.Hour);//En la variable se almacena la hora actual.
+            string Fish = "FishKen";
+            string Contrasena = hora + Fish;
+            string ContrasenaGeneral = Properties.Settings.Default.PASSGENERAL;
+
+            if (txtPass.Text != "")
+            {
+
+                if (txtPass.Text == Contrasena || txtPass.Text == ContrasenaGeneral)
+                {
+                    Frames.FrmConfPeriodoActividad4 formt4 = new FrmConfPeriodoActividad4();
+                    formt4.Show();
+                    this.Close();
+
+                }
+
+                else
+                {
+                    lblAdvertenciaPass.Text = "Contrasena incorrecta";
+                }
+            }
+            else
+            {
+
+                lblAdvertenciaPass.Text = "Ingrese contrasena";
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -44,9 +68,10 @@ namespace SecadorBotas.Frames
 
                 if (txtPass.Text == Contrasena || txtPass.Text == ContrasenaGeneral)
                 {
-                    Frames.FrmConfPeriodoActividad formtPeriodo = new Frames.FrmConfPeriodoActividad();
-                    formtPeriodo.Show();
+                    Frames.FrmConfPeriodoActividad4 formt4 = new FrmConfPeriodoActividad4();
+                    formt4.Show();
                     this.Close();
+
                 }
 
                 else

@@ -114,8 +114,13 @@ namespace SecadorBotas.Frames
             this.Close();
         }
 
-
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Frames.FrmLoginPeriodoActiv1 formtP = new Frames.FrmLoginPeriodoActiv1();
+            formtP.Show();
+            this.Close();
         }
+    }
 
        
     }

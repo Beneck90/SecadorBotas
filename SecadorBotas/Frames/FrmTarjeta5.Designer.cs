@@ -56,6 +56,8 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblMensaje5 = new System.Windows.Forms.Label();
+            this.timerON = new System.Windows.Forms.Timer(this.components);
+            this.timerOFF = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -322,6 +324,14 @@
             this.lblMensaje5.Size = new System.Drawing.Size(0, 22);
             this.lblMensaje5.TabIndex = 278;
             // 
+            // timerON
+            // 
+            this.timerON.Tick += new System.EventHandler(this.timerON_Tick);
+            // 
+            // timerOFF
+            // 
+            this.timerOFF.Tick += new System.EventHandler(this.timerOFF_Tick);
+            // 
             // FrmTarjeta5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,5 +404,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label lblMensaje5;
+        private System.Windows.Forms.Timer timerON;
+        private System.Windows.Forms.Timer timerOFF;
     }
 }

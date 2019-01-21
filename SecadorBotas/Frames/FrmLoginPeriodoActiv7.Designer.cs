@@ -1,6 +1,6 @@
 ﻿namespace SecadorBotas.Frames
 {
-    partial class FrmLoginPeriodoActiv
+    partial class FrmLoginPeriodoActiv7
     {
         /// <summary>
         /// Required designer variable.
@@ -119,6 +119,7 @@
             this.txtPass.Location = new System.Drawing.Point(226, 118);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(211, 27);
             this.txtPass.TabIndex = 3;
             // 
@@ -153,7 +154,7 @@
             this.LOGIN.TabIndex = 240;
             this.LOGIN.Text = "LOGIN";
             // 
-            // FrmLoginPeriodoActiv
+            // FrmLoginPeriodoActiv7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,9 +165,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LOGIN);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmLoginPeriodoActiv";
+            this.Name = "FrmLoginPeriodoActiv7";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLoginPeriodoActiv";
+            this.Load += new System.EventHandler(this.FrmLoginPeriodoActiv7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.groupBox1.ResumeLayout(false);

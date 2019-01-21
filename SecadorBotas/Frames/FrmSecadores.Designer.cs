@@ -139,12 +139,31 @@
             this.timerONCalefactor7 = new System.Windows.Forms.Timer(this.components);
             this.timerOFFCalefactor7 = new System.Windows.Forms.Timer(this.components);
             this.timerTemp7 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMsjRed = new System.Windows.Forms.Label();
-            this.timerApagado = new System.Windows.Forms.Timer(this.components);
+            this.timerON7 = new System.Windows.Forms.Timer(this.components);
+            this.timerOFF7 = new System.Windows.Forms.Timer(this.components);
+            this.timerVerificaEstado7 = new System.Windows.Forms.Timer(this.components);
+            this.timerON6 = new System.Windows.Forms.Timer(this.components);
+            this.timerOFF6 = new System.Windows.Forms.Timer(this.components);
+            this.timerVerificaEstado6 = new System.Windows.Forms.Timer(this.components);
+            this.timerON5 = new System.Windows.Forms.Timer(this.components);
+            this.timerOFF5 = new System.Windows.Forms.Timer(this.components);
+            this.timerVerificaEstado5 = new System.Windows.Forms.Timer(this.components);
+            this.timerON4 = new System.Windows.Forms.Timer(this.components);
+            this.timerOFF4 = new System.Windows.Forms.Timer(this.components);
+            this.timerVerificaEstado4 = new System.Windows.Forms.Timer(this.components);
+            this.timerON3 = new System.Windows.Forms.Timer(this.components);
+            this.timerOFF3 = new System.Windows.Forms.Timer(this.components);
+            this.timerVerificaEstado3 = new System.Windows.Forms.Timer(this.components);
+            this.timerON2 = new System.Windows.Forms.Timer(this.components);
+            this.timerOFF2 = new System.Windows.Forms.Timer(this.components);
+            this.timerVerificaEstado2 = new System.Windows.Forms.Timer(this.components);
+            this.timerON1 = new System.Windows.Forms.Timer(this.components);
+            this.timerOFF1 = new System.Windows.Forms.Timer(this.components);
+            this.timerVerificaEstado1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisabled7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisabled6)).BeginInit();
@@ -167,7 +186,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT2OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT1OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT1ON)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -970,21 +988,10 @@
             // 
             this.timerTemp7.Tick += new System.EventHandler(this.timerTemp7_Tick);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::SecadorBotas.Properties.Resources.timeline;
-            this.pictureBox4.Location = new System.Drawing.Point(494, 604);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(85, 79);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 235;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::SecadorBotas.Properties.Resources.BtnVolver;
-            this.pictureBox3.Location = new System.Drawing.Point(374, 604);
+            this.pictureBox3.Location = new System.Drawing.Point(394, 604);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(85, 79);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -995,7 +1002,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SecadorBotas.Properties.Resources.BtnOFF;
-            this.pictureBox2.Location = new System.Drawing.Point(619, 604);
+            this.pictureBox2.Location = new System.Drawing.Point(582, 604);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(85, 79);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1024,9 +1031,96 @@
             this.lblMsjRed.Size = new System.Drawing.Size(0, 14);
             this.lblMsjRed.TabIndex = 236;
             // 
-            // timerApagado
+            // timerON7
             // 
-            this.timerApagado.Tick += new System.EventHandler(this.timerApagado_Tick);
+            this.timerON7.Tick += new System.EventHandler(this.timerON7_Tick);
+            // 
+            // timerOFF7
+            // 
+            this.timerOFF7.Interval = 20;
+            this.timerOFF7.Tick += new System.EventHandler(this.timerOFF7_Tick);
+            // 
+            // timerVerificaEstado7
+            // 
+            this.timerVerificaEstado7.Tick += new System.EventHandler(this.timerVerificaEstado7_Tick);
+            // 
+            // timerON6
+            // 
+            this.timerON6.Tick += new System.EventHandler(this.timerON6_Tick);
+            // 
+            // timerOFF6
+            // 
+            this.timerOFF6.Interval = 20;
+            this.timerOFF6.Tick += new System.EventHandler(this.timerOFF6_Tick);
+            // 
+            // timerVerificaEstado6
+            // 
+            this.timerVerificaEstado6.Tick += new System.EventHandler(this.timerVerificaEstado6_Tick);
+            // 
+            // timerON5
+            // 
+            this.timerON5.Tick += new System.EventHandler(this.timerON5_Tick);
+            // 
+            // timerOFF5
+            // 
+            this.timerOFF5.Interval = 20;
+            this.timerOFF5.Tick += new System.EventHandler(this.timerOFF5_Tick);
+            // 
+            // timerVerificaEstado5
+            // 
+            this.timerVerificaEstado5.Tick += new System.EventHandler(this.timerVerificaEstado5_Tick);
+            // 
+            // timerON4
+            // 
+            this.timerON4.Tick += new System.EventHandler(this.timerON4_Tick);
+            // 
+            // timerOFF4
+            // 
+            this.timerOFF4.Interval = 20;
+            this.timerOFF4.Tick += new System.EventHandler(this.timerOFF4_Tick);
+            // 
+            // timerVerificaEstado4
+            // 
+            this.timerVerificaEstado4.Tick += new System.EventHandler(this.timerVerificaEstado4_Tick);
+            // 
+            // timerON3
+            // 
+            this.timerON3.Tick += new System.EventHandler(this.timerON3_Tick);
+            // 
+            // timerOFF3
+            // 
+            this.timerOFF3.Interval = 20;
+            this.timerOFF3.Tick += new System.EventHandler(this.timerOFF3_Tick);
+            // 
+            // timerVerificaEstado3
+            // 
+            this.timerVerificaEstado3.Tick += new System.EventHandler(this.timerVerificaEstado3_Tick);
+            // 
+            // timerON2
+            // 
+            this.timerON2.Tick += new System.EventHandler(this.timerON2_Tick);
+            // 
+            // timerOFF2
+            // 
+            this.timerOFF2.Interval = 20;
+            this.timerOFF2.Tick += new System.EventHandler(this.timerOFF2_Tick);
+            // 
+            // timerVerificaEstado2
+            // 
+            this.timerVerificaEstado2.Tick += new System.EventHandler(this.timerVerificaEstado2_Tick);
+            // 
+            // timerON1
+            // 
+            this.timerON1.Tick += new System.EventHandler(this.timerON1_Tick);
+            // 
+            // timerOFF1
+            // 
+            this.timerOFF1.Interval = 20;
+            this.timerOFF1.Tick += new System.EventHandler(this.timerOFF1_Tick);
+            // 
+            // timerVerificaEstado1
+            // 
+            this.timerVerificaEstado1.Tick += new System.EventHandler(this.timerVerificaEstado1_Tick);
             // 
             // FrmSecadores
             // 
@@ -1035,7 +1129,6 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.lblMsjRed);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
@@ -1068,7 +1161,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT2OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT1OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxT1ON)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1192,8 +1284,27 @@
         private System.Windows.Forms.PictureBox pictureBoxDisabled4;
         private System.Windows.Forms.PictureBox pictureBoxDisabled2;
         private System.Windows.Forms.PictureBox pictureBoxDisabled1;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblMsjRed;
-        private System.Windows.Forms.Timer timerApagado;
+        private System.Windows.Forms.Timer timerON7;
+        private System.Windows.Forms.Timer timerOFF7;
+        private System.Windows.Forms.Timer timerVerificaEstado7;
+        private System.Windows.Forms.Timer timerON6;
+        private System.Windows.Forms.Timer timerOFF6;
+        private System.Windows.Forms.Timer timerVerificaEstado6;
+        private System.Windows.Forms.Timer timerON5;
+        private System.Windows.Forms.Timer timerOFF5;
+        private System.Windows.Forms.Timer timerVerificaEstado5;
+        private System.Windows.Forms.Timer timerON4;
+        private System.Windows.Forms.Timer timerOFF4;
+        private System.Windows.Forms.Timer timerVerificaEstado4;
+        private System.Windows.Forms.Timer timerON3;
+        private System.Windows.Forms.Timer timerOFF3;
+        private System.Windows.Forms.Timer timerVerificaEstado3;
+        private System.Windows.Forms.Timer timerON2;
+        private System.Windows.Forms.Timer timerOFF2;
+        private System.Windows.Forms.Timer timerVerificaEstado2;
+        private System.Windows.Forms.Timer timerON1;
+        private System.Windows.Forms.Timer timerOFF1;
+        private System.Windows.Forms.Timer timerVerificaEstado1;
     }
 }

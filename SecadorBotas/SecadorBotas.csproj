@@ -67,8 +67,12 @@
     <Reference Include="DevExpress.Utils.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.IO.Compression" />
@@ -80,12 +84,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TaskScheduler, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Librerias Programador de tareas C#\TaskScheduler Library &amp; Doc\TaskScheduler.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\ConexBD.cs" />
     <Compile Include="Clases\MinimilistTelnet.cs" />
     <Compile Include="Clases\Relay.cs" />
     <Compile Include="Form1.cs">
@@ -106,11 +107,47 @@
     <Compile Include="Frames\FrmConfigParametros.Designer.cs">
       <DependentUpon>FrmConfigParametros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frames\FrmConfPeriodoActividad.cs">
+    <Compile Include="Frames\FrmConfPeriodoActividad1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frames\FrmConfPeriodoActividad.Designer.cs">
-      <DependentUpon>FrmConfPeriodoActividad.cs</DependentUpon>
+    <Compile Include="Frames\FrmConfPeriodoActividad1.Designer.cs">
+      <DependentUpon>FrmConfPeriodoActividad1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad2.Designer.cs">
+      <DependentUpon>FrmConfPeriodoActividad2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad3.Designer.cs">
+      <DependentUpon>FrmConfPeriodoActividad3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad4.Designer.cs">
+      <DependentUpon>FrmConfPeriodoActividad4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad5.Designer.cs">
+      <DependentUpon>FrmConfPeriodoActividad5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad6.Designer.cs">
+      <DependentUpon>FrmConfPeriodoActividad6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmConfPeriodoActividad7.Designer.cs">
+      <DependentUpon>FrmConfPeriodoActividad7.cs</DependentUpon>
     </Compile>
     <Compile Include="Frames\FrmConfServTar1.cs">
       <SubType>Form</SubType>
@@ -153,12 +190,6 @@
     </Compile>
     <Compile Include="Frames\FrmConfServTar7.Designer.cs">
       <DependentUpon>FrmConfServTar7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frames\FrmGuiaEncendidoAuto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frames\FrmGuiaEncendidoAuto.Designer.cs">
-      <DependentUpon>FrmGuiaEncendidoAuto.cs</DependentUpon>
     </Compile>
     <Compile Include="Frames\FrmLoginAyudaInstalacion.cs">
       <SubType>Form</SubType>
@@ -226,11 +257,47 @@
     <Compile Include="Frames\FrmLoginParametros.Designer.cs">
       <DependentUpon>FrmLoginParametros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frames\FrmLoginPeriodoActiv.cs">
+    <Compile Include="Frames\FrmLoginPeriodoActiv1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frames\FrmLoginPeriodoActiv.Designer.cs">
-      <DependentUpon>FrmLoginPeriodoActiv.cs</DependentUpon>
+    <Compile Include="Frames\FrmLoginPeriodoActiv1.Designer.cs">
+      <DependentUpon>FrmLoginPeriodoActiv1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv2.Designer.cs">
+      <DependentUpon>FrmLoginPeriodoActiv2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv3.Designer.cs">
+      <DependentUpon>FrmLoginPeriodoActiv3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv4.Designer.cs">
+      <DependentUpon>FrmLoginPeriodoActiv4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv5.Designer.cs">
+      <DependentUpon>FrmLoginPeriodoActiv5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv6.Designer.cs">
+      <DependentUpon>FrmLoginPeriodoActiv6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FrmLoginPeriodoActiv7.Designer.cs">
+      <DependentUpon>FrmLoginPeriodoActiv7.cs</DependentUpon>
     </Compile>
     <Compile Include="Frames\FrmMenuServicioTarj1.cs">
       <SubType>Form</SubType>
@@ -354,8 +421,26 @@
     <EmbeddedResource Include="Frames\FrmConfigParametros.resx">
       <DependentUpon>FrmConfigParametros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frames\FrmConfPeriodoActividad.resx">
-      <DependentUpon>FrmConfPeriodoActividad.cs</DependentUpon>
+    <EmbeddedResource Include="Frames\FrmConfPeriodoActividad1.resx">
+      <DependentUpon>FrmConfPeriodoActividad1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmConfPeriodoActividad2.resx">
+      <DependentUpon>FrmConfPeriodoActividad2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmConfPeriodoActividad3.resx">
+      <DependentUpon>FrmConfPeriodoActividad3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmConfPeriodoActividad4.resx">
+      <DependentUpon>FrmConfPeriodoActividad4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmConfPeriodoActividad5.resx">
+      <DependentUpon>FrmConfPeriodoActividad5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmConfPeriodoActividad6.resx">
+      <DependentUpon>FrmConfPeriodoActividad6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmConfPeriodoActividad7.resx">
+      <DependentUpon>FrmConfPeriodoActividad7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frames\FrmConfServTar1.resx">
       <DependentUpon>FrmConfServTar1.cs</DependentUpon>
@@ -377,9 +462,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frames\FrmConfServTar7.resx">
       <DependentUpon>FrmConfServTar7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frames\FrmGuiaEncendidoAuto.resx">
-      <DependentUpon>FrmGuiaEncendidoAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frames\FrmLoginAyudaInstalacion.resx">
       <DependentUpon>FrmLoginAyudaInstalacion.cs</DependentUpon>
@@ -414,8 +496,26 @@
     <EmbeddedResource Include="Frames\FrmLoginParametros.resx">
       <DependentUpon>FrmLoginParametros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frames\FrmLoginPeriodoActiv.resx">
-      <DependentUpon>FrmLoginPeriodoActiv.cs</DependentUpon>
+    <EmbeddedResource Include="Frames\FrmLoginPeriodoActiv1.resx">
+      <DependentUpon>FrmLoginPeriodoActiv1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmLoginPeriodoActiv2.resx">
+      <DependentUpon>FrmLoginPeriodoActiv2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmLoginPeriodoActiv3.resx">
+      <DependentUpon>FrmLoginPeriodoActiv3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmLoginPeriodoActiv4.resx">
+      <DependentUpon>FrmLoginPeriodoActiv4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmLoginPeriodoActiv5.resx">
+      <DependentUpon>FrmLoginPeriodoActiv5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmLoginPeriodoActiv6.resx">
+      <DependentUpon>FrmLoginPeriodoActiv6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FrmLoginPeriodoActiv7.resx">
+      <DependentUpon>FrmLoginPeriodoActiv7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frames\FrmMenuServicioTarj1.resx">
       <DependentUpon>FrmMenuServicioTarj1.cs</DependentUpon>
@@ -471,12 +571,14 @@
     <EmbeddedResource Include="Frames\FrmTESTRelays.resx">
       <DependentUpon>FrmTESTRelays.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="bin\Debug\SecadorBotas.vshost.exe.config" />
+    <None Include="Properties\DataSources\SecadorBotas.Clases.ON.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -513,6 +615,7 @@
     <Content Include="Imgs\BtnVolver.png" />
     <Content Include="Imgs\Config.png" />
     <Content Include="Imgs\decrement.png" />
+    <Content Include="Imgs\delete.png" />
     <Content Include="Imgs\Disabled.png" />
     <Content Include="Imgs\filtro-uv%282%29.png" />
     <Content Include="Imgs\filtroUVON.png" />
