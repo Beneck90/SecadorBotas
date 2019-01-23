@@ -78,7 +78,6 @@ namespace SecadorBotas.Frames
 
         private void timerTemp_Tick(object sender, EventArgs e)
         {
-
             try
             {
                 string IP1 = Properties.Settings.Default.IP1.ToString();//IP secador 1
@@ -99,7 +98,11 @@ namespace SecadorBotas.Frames
 
                 //Llenado de barra de temperatura
                 int Respuesta3 = Convert.ToInt32(Respuesta2222);
+
+                //Carga la barra de temperatura en un rango de 0 a 100.
                 progressBarTemp1.Value = Respuesta3;
+
+                //Muestra los grados
                 lblTemp.Text = Respuesta3.ToString() + "°C";
 
                 int temnpMax = Properties.Settings.Default.TempMax1;

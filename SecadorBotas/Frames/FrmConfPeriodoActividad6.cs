@@ -88,14 +88,23 @@ namespace SecadorBotas.Frames
 
                 else
                 {
-                    //LLAMADA DEL METODO INSERTAR ENCENDIDO DE SECADOR 6
-                    conex.InsertarEncendido6(dia, hora, minuto);
+                    DialogResult result = MessageBox.Show("¿Esta Seguro Que Desea Guardar Esta programación?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
 
-                    //LLAMADA A METODO QUE CARGA EL GRID
-                    CargarDataGridON();
+                    if (result == DialogResult.Yes)
+                    {
+                        //LLAMADA DEL METODO INSERTAR ENCENDIDO DE SECADOR 6
+                        conex.InsertarEncendido6(dia, hora, minuto);
 
-                    //MENSAJE POR PANTALLA
-                    MessageBox.Show("Encendido automático guardado!");
+                        //LLAMADA A METODO QUE CARGA EL GRID
+                        CargarDataGridON();
+
+                        //MENSAJE POR PANTALLA
+                        MessageBox.Show("Encendido automático guardado!");
+                    }
+                    else
+                    {
+
+                    }
                 }
             }
         }
@@ -126,15 +135,23 @@ namespace SecadorBotas.Frames
                 }
                 else
                 {
+                    DialogResult result = MessageBox.Show("¿Esta Seguro Que Desea Guardar Esta programación?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
 
-                    //LLAMADA DEL METODO INSERTAR APAGADO DE SECADOR 7
-                    conex.InsertarApagado6(dia, hora, minuto);
+                    if (result == DialogResult.Yes)
+                    {
+                        //LLAMADA DEL METODO INSERTAR APAGADO DE SECADOR 7
+                        conex.InsertarApagado6(dia, hora, minuto);
 
-                    //LLAMADA A METODO QUE CARGA EL GRID
-                    CargarDataGridOFF();
+                        //LLAMADA A METODO QUE CARGA EL GRID
+                        CargarDataGridOFF();
 
-                    //MENSAJE POR PANTALLA
-                    MessageBox.Show("Apagado automático guardado!");
+                        //MENSAJE POR PANTALLA
+                        MessageBox.Show("Apagado automático guardado!");
+                    }
+                    else
+                    {
+
+                    }
                 }
             }
         }
@@ -152,21 +169,29 @@ namespace SecadorBotas.Frames
             using (SqlConnection cnn = new SqlConnection(sqlConexionWebConfig))
 
             {
+                DialogResult result = MessageBox.Show("¿Esta Seguro Que Desea Eliminar Esta programación?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                if (result == DialogResult.Yes)
+                {
+                    string query = "delete from EncendidoSecador6 where id = @Id";
 
-                string query = "delete from EncendidoSecador6 where id = @Id";
+                    SqlCommand cmd = new SqlCommand(query, cnn);
+                    cnn.Open();
 
-                SqlCommand cmd = new SqlCommand(query, cnn);
-                cnn.Open();
+                    cmd.Parameters.AddWithValue("@Id", Id);
+                    cmd.ExecuteNonQuery();
+                    dataGridViewON.Rows.Remove(dataGridViewON.CurrentRow);
 
-                cmd.Parameters.AddWithValue("@Id", Id);
-                cmd.ExecuteNonQuery();
+                    //MENSAJE POR PANTALLA
+                    MessageBox.Show("Encendido automático removido!");
+                }
+                else
+                {
+
+                }
 
             }
 
-            dataGridViewON.Rows.Remove(dataGridViewON.CurrentRow);
-
-            //MENSAJE POR PANTALLA
-            MessageBox.Show("Encendido automático removido!");
+            
         }
 
         private void pictureBoxBorrarOFF_Click(object sender, EventArgs e)
@@ -184,21 +209,30 @@ namespace SecadorBotas.Frames
             using (SqlConnection cnn = new SqlConnection(sqlConexionWebConfig))
 
             {
+                DialogResult result = MessageBox.Show("¿Esta Seguro Que Desea Eliminar Esta programación?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                if (result == DialogResult.Yes)
+                {
+                    string query = "delete from ApagadoSecador6 where idOff = @Id";
 
-                string query = "delete from ApagadoSecador6 where idOff = @Id";
+                    SqlCommand cmd = new SqlCommand(query, cnn);
+                    cnn.Open();
 
-                SqlCommand cmd = new SqlCommand(query, cnn);
-                cnn.Open();
+                    cmd.Parameters.AddWithValue("@Id", IdOff);
+                    cmd.ExecuteNonQuery();
 
-                cmd.Parameters.AddWithValue("@Id", IdOff);
-                cmd.ExecuteNonQuery();
+                    dataGridViewOFF.Rows.Remove(dataGridViewOFF.CurrentRow);
+
+                    //MENSAJE POR PANTALLA
+                    MessageBox.Show("Apagado automático removido!");
+                }
+                else
+                {
+
+                }
 
             }
 
-            dataGridViewOFF.Rows.Remove(dataGridViewOFF.CurrentRow);
-
-            //MENSAJE POR PANTALLA
-            MessageBox.Show("Apagado automático removido!");
+            
         }
 
         private void pbAumentaONhrs_Click(object sender, EventArgs e)

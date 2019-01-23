@@ -98,6 +98,7 @@ namespace SecadorBotas.Frames
 
                 try
                 {
+                    //Tiene que haber alida a internet para poder enviar el correo
                     smtp.Send(email);
                     output = "Correo electrónico fue enviado satisfactoriamente.";
                 }
